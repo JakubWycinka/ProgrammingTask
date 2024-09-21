@@ -60,12 +60,30 @@ namespace TextEvaluator.Domain.UnitTests
                     { "play", 1 },
                     { "football", 1 },
                 }
+            },
+            {
+                [
+                    "I am a method"
+                ],
+                new Dictionary<string, int>()
+                {
+                    { "I", 1 },
+                    { "am", 1 },
+                    { "a", 1 },
+                    { "method", 1 },
+                }
+            },
+            {
+                [
+                    null!, null!
+                ],
+                new Dictionary<string, int>() { }
             }
         };
 
         [Theory]
         [MemberData(nameof(TestCases))]
-        public void GivenTwoTexts_WhenCountOccurrencesOfUniqueWords_ThenGetExpectedResult(string[] texts, Dictionary<string, int> expectedOccurrencesOfUniqueWords)
+        public void GivenTwoTexts_WhenCountOccurrencesOfUniqueWords_ThenGetExpectedResult(string?[] texts, Dictionary<string, int> expectedOccurrencesOfUniqueWords)
         {
             // Arrange
             var wordsCounter = new TextEvaluator();
