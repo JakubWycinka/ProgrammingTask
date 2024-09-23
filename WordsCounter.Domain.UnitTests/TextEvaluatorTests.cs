@@ -4,7 +4,7 @@ namespace TextEvaluator.Domain.UnitTests
 {
     public class TextEvaluatorTests
     {
-        public static TheoryData<string[], Dictionary<string, int>> TestCases = new()
+        public static TheoryData<string?[]?, Dictionary<string, int>> TestCases = new()
         {
             {
                 [
@@ -75,15 +75,19 @@ namespace TextEvaluator.Domain.UnitTests
             },
             {
                 [
-                    null!, null!
+                    null, null
                 ],
+                new Dictionary<string, int>() { }
+            },
+            {
+                null,
                 new Dictionary<string, int>() { }
             }
         };
 
         [Theory]
         [MemberData(nameof(TestCases))]
-        public void GivenTwoTexts_WhenCountOccurrencesOfUniqueWords_ThenGetExpectedResult(string?[] texts, Dictionary<string, int> expectedOccurrencesOfUniqueWords)
+        public void GivenTwoTexts_WhenCountOccurrencesOfUniqueWords_ThenGetExpectedResult(string?[]? texts, Dictionary<string, int> expectedOccurrencesOfUniqueWords)
         {
             // Arrange
             var wordsCounter = new TextEvaluator();

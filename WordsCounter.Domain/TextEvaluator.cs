@@ -14,13 +14,13 @@
         /// { "a", 1 },
         /// { "method", 1 } 
         /// </returns>
-        public IDictionary<string, int> GetOccurrencesOfUniqueWords(params string?[] texts)
+        public IDictionary<string, int> GetOccurrencesOfUniqueWords(params string?[]? texts)
         {
-            return texts
+            return texts?
                 .Where(text => text is not null)
                 .SelectMany(text => text!.Split(WordSeparators, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries))
                 .GroupBy(word => word, new WordComparer())
-                .ToDictionary(keySelector: x => x.Key, elementSelector: y => y.Count());
+                .ToDictionary(keySelector: x => x.Key, elementSelector: y => y.Count()) ?? new Dictionary<string, int>(capacity: 0);
         }
 
         private static char[] GetWordSeparators()
