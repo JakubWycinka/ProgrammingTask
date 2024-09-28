@@ -1,6 +1,6 @@
 ﻿namespace TextEvaluator.Domain
 {
-    public class TextEvaluator
+    public class TextEvaluator : ITextEvaluator
     {
         private static readonly char[] WordSeparators = GetWordSeparators();
 
@@ -14,7 +14,7 @@
         /// { "a", 1 },
         /// { "method", 1 } 
         /// </returns>
-        public IDictionary<string, int> GetOccurrencesOfUniqueWords(params string?[]? texts)
+        public IReadOnlyDictionary<string, int> GetOccurrencesOfUniqueWords(params string?[]? texts)
         {
             return texts?
                 .Where(text => text is not null)

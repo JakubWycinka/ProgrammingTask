@@ -35,7 +35,7 @@
             {
                 if (side1 <= 0 || side2 <= 0 || side3 <= 0)
                 {
-                    throw new ArgumentException("All sides must be greater then 0.");
+                    throw new ArgumentException("All sides must be greater than 0.");
                 }
             }
 
@@ -50,7 +50,7 @@
 
                 if (!satisfiesTriangleInequalityTheorem)
                 {
-                    throw new ArgumentException("To have valid triangle the sum of two shortest sides must be greater then the longest side.");
+                    throw new ArgumentException("For a triangle to be valid, the sum of the two shorter sides must be greater than the longest side.");
                 }
             }
         }
