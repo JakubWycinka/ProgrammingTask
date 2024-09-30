@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WordsCounter.Domain\TextEvaluator.Domain.csproj" />
+    <ProjectReference Include="..\TextEvaluator.Domain\TextEvaluator.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Triangle.Domain", "Triangle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Triangle.Domain.UnitTests", "Triangle.Domain.UnitTests\Triangle.Domain.UnitTests.csproj", "{9ECEF985-A92E-4CF8-BBE3-3E97FEDB303D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextEvaluator.Domain", "WordsCounter.Domain\TextEvaluator.Domain.csproj", "{CE2A22FF-408C-4AB1-BE7D-99F11659D703}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextEvaluator.Domain", "TextEvaluator.Domain\TextEvaluator.Domain.csproj", "{CE2A22FF-408C-4AB1-BE7D-99F11659D703}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextEvaluator.Domain.UnitTests", "WordsCounter.Domain.UnitTests\TextEvaluator.Domain.UnitTests.csproj", "{49368E01-B30A-418E-A690-9F00773319D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextEvaluator.Domain.UnitTests", "TextEvaluator.Domain.UnitTests\TextEvaluator.Domain.UnitTests.csproj", "{49368E01-B30A-418E-A690-9F00773319D8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Triangle.Console", "Triangle.Console\Triangle.Console.csproj", "{07F4CFCB-0605-4D4F-B9E1-4D9A987C2042}"
 EndProject
